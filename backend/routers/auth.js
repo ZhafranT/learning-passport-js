@@ -7,9 +7,9 @@ router.get('/login/success', (req, res) => {
    if (req.user) {
       res.status(200).json({
          success: true,
-         message: 'success',
+         message: 'successfully',
          user: req.user,
-         // cookies: req.c ookies,
+         //   cookies: req.cookies
       });
    }
 });
@@ -19,8 +19,7 @@ router.get('/login/failed', (req, res) => {
       message: 'failed',
    });
 });
-// note time
-// 56:19
+
 router.get('/logout', (req, res) => {
    req.logout();
    res.redirect(CLIENT_URL);

@@ -1,5 +1,5 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const passport = require('passport')
+const passport = require('passport');
 
 const GOOGLE_CLIENT_ID = '937895354556-c198p2fjfkpp4horamr4ao7itv9jc2uq.apps.googleusercontent.com';
 const GOOGLE_CLIENT_SECRET = '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';
@@ -21,11 +21,10 @@ passport.use(
    )
 );
 
-
 passport.serializeUser((user, done) => {
    done(null, user);
-})
+});
 
 passport.deserializeUser((user, done) => {
    done(null, user);
-})
+});
